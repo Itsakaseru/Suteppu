@@ -2,6 +2,7 @@
 	"name": "suteppu",
 	"displayName": "Suteppu",
 	"description": "",
+	"publisher": "Itsakaseru",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.59.0"
@@ -14,6 +15,23 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "suteppu",
+					"title": "Suteppu",
+					"icon": "res/logo.svg"
+				}
+			]
+		},
+		"views": {
+			"suteppu": [
+				{
+					"id": "suteppu-storage",
+					"name": "Storage Memory"
+				}
+			]
+		},
 		"commands": [
 			{
 				"command": "suteppu.saveStep",
@@ -24,8 +42,12 @@
 				"title": "Suteppu: Redo step"
 			},
 			{
-				"command": "suteppu.refresh",
-				"title": "Suteppu: Refresh"
+				"command": "suteppu.saveToFile",
+				"title": "Suteppu: Save Steps to File"
+			},
+			{
+				"command": "suteppu.loadFromFile",
+				"title": "Suteppu: Load Steps from File"
 			}
 		],
 		"keybindings": [
