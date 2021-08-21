@@ -1,6 +1,8 @@
 import * as vscode from "vscode";
+import { SuteppuProvider } from "../provider/SuteppuProvider";
+import IStorage from "../types/IStorage";
 
-export default async function redoStep(temporaryStorage: any)
+export default async function redoStep(suteppu: SuteppuProvider, temporaryStorage: IStorage[])
 {
     const editor = vscode.window.activeTextEditor;
 
@@ -21,4 +23,6 @@ export default async function redoStep(temporaryStorage: any)
         const position = new vscode.Position(data.startAtLine, data.textStartAt);
         builder.insert(position, data.text);
     });
+
+    suteppu.refresh();
 }
