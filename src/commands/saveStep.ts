@@ -1,6 +1,8 @@
 import * as vscode from "vscode";
+import { SuteppuProvider } from "../provider/SuteppuProvider";
+import IStorage from "../types/IStorage";
 
-export default function saveStep(temporaryStorage: any)
+export default function saveStep(suteppu: SuteppuProvider, temporaryStorage: IStorage[])
 {
     const editor = vscode.window.activeTextEditor;
 
@@ -32,8 +34,8 @@ export default function saveStep(temporaryStorage: any)
             builder.delete(selection);
         });
 
-        console.info(editor.document.fileName);
+        console.log(temporaryStorage);
 
-        console.info({ selectedText, startAtLine, endAtLine, textStartAt, textEndAt });
+        suteppu.refresh();
     }
 }
