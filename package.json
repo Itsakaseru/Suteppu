@@ -10,15 +10,37 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:suteppu.helloWorld"
+		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "suteppu.helloWorld",
-				"title": "Hello World"
+				"command": "suteppu.saveStep",
+				"title": "Suteppu: Save step"
+			},
+			{
+				"command": "suteppu.reStep",
+				"title": "Suteppu: Redo step"
+			},
+			{
+				"command": "suteppu.refresh",
+				"title": "Suteppu: Refresh"
 			}
+		],
+		"keybindings": [
+			{
+    		"command": "suteppu.saveStep",
+    		"key": "home",
+    		"mac": "home",
+    		"when": "editorTextFocus"
+  			},
+			{
+    		"command": "suteppu.reStep",
+    		"key": "end",
+    		"mac": "end",
+    		"when": "editorTextFocus"
+  			}
 		]
 	},
 	"scripts": {
