@@ -18,11 +18,15 @@ export default async function redoStep(suteppu: SuteppuProvider, temporaryStorag
         return;
     }
 
+    const startPos = new vscode.Position(data.startAtLine, data.textStartAt);
+    const endPos = new vscode.Position(data.endAtLine, data.textEndAt);
+
     await editor.edit(builder =>
     {
-        const position = new vscode.Position(data.startAtLine, data.textStartAt);
-        builder.insert(position, data.text);
+        builder.insert(startPos, data.text);
     });
+
+    editor.selection = new vscode.Selection(startPos, endPos);
 
     suteppu.refresh();
 }
