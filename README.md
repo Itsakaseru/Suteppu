@@ -1,5 +1,7 @@
 # suteppu README
 
+This extension is still under **closed** development.
+
 This is the README for your extension "suteppu". After writing up a brief description, we recommend including the following sections.
 
 ## Features
