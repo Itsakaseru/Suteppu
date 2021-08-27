@@ -23,16 +23,21 @@ export default async function loadFromFile(suteppu: SuteppuProvider, temporarySt
         return;
     }
 
-    if (await showConfirmMessage())
+    if (temporaryStorage.length > 0)
     {
-        const file = await workspace.fs.readFile(fileUri[ 0 ]);
-        const newStorage = JSON.parse(new TextDecoder().decode(file));
-
-        temporaryStorage.length = 0;
-        temporaryStorage.push(...newStorage);
-
-        suteppu.refresh();
+        if (!await showConfirmMessage())
+        {
+            return;
+        }
     }
+
+    const file = await workspace.fs.readFile(fileUri[ 0 ]);
+    const newStorage = JSON.parse(new TextDecoder().decode(file));
+
+    temporaryStorage.length = 0;
+    temporaryStorage.push(...newStorage);
+
+    suteppu.refresh();
 }
 
 async function showConfirmMessage()
