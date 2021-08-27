@@ -19,6 +19,7 @@ export default function saveStep(suteppu: SuteppuProvider, temporaryStorage: ISt
         const selectedText = document.getText(selection);
 
         const data = {
+            index: temporaryStorage.length + 1,
             text: selectedText,
             startAtLine,
             endAtLine,

@@ -5,10 +5,12 @@ class Suteppu extends vscode.TreeItem
 {
     constructor(
         public readonly label: string,
+        public readonly index: number
     )
     {
         super(label);
         this.tooltip = label;
+        this.index = index;
     }
 }
 
@@ -38,8 +40,9 @@ export class SuteppuProvider implements vscode.TreeDataProvider<Suteppu>
 
         for (let i = 0; i < this.storage.length; i++)
         {
-            const label = `[Step #${ this.storage.length - i }]`;
-            data.unshift(new Suteppu(label));
+            const { index } = this.storage[ i ];
+            const label = `[Step #${ index }]`;
+            data.unshift(new Suteppu(label, index));
         }
 
         return data;
