@@ -1,9 +1,10 @@
 # Change Log
+## v2021.0.0.2-alpha
 
-All notable changes to the "suteppu" extension will be documented in this file.
+- Make step number in storage preview make sense
+- Add commands to clear all steps
+- Add ability to run commands from TreeView
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## v2021.0.0.1-alpha
 
-## [Unreleased]
-
-- Initial release
+- Initial pre-release
