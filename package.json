@@ -32,6 +32,20 @@
 				}
 			]
 		},
+		"menus": {
+			"view/title": [
+				{
+					"command": "suteppu.saveToFile",
+					"group": "navigation",
+					"when": "view == suteppu-storage"
+				},
+				{
+					"command": "suteppu.loadFromFile",
+					"group": "navigation",
+					"when": "view == suteppu-storage"
+				}
+			]
+		},
 		"commands": [
 			{
 				"command": "suteppu.saveStep",
@@ -43,11 +57,13 @@
 			},
 			{
 				"command": "suteppu.saveToFile",
-				"title": "Suteppu: Save Steps to File"
+				"title": "Suteppu: Save Steps to File",
+				"icon": "$(save)"
 			},
 			{
 				"command": "suteppu.loadFromFile",
-				"title": "Suteppu: Load Steps from File"
+				"title": "Suteppu: Load Steps from File",
+				"icon": "$(preferences-open-settings)"
 			}
 		],
 		"keybindings": [
