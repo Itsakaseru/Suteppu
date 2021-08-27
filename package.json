@@ -3,6 +3,7 @@
 	"displayName": "Suteppu",
 	"description": "",
 	"publisher": "Itsakaseru",
+	"repository": "https://github.com/Itsakaseru/Suteppu",
 	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.59.0"
