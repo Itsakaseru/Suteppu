@@ -43,6 +43,11 @@
 					"command": "suteppu.loadFromFile",
 					"group": "navigation",
 					"when": "view == suteppu-storage"
+				},
+				{
+					"command": "suteppu.clearAllSteps",
+					"group": "navigation",
+					"when": "view == suteppu-storage"
 				}
 			]
 		},
@@ -54,6 +59,11 @@
 			{
 				"command": "suteppu.reStep",
 				"title": "Suteppu: Redo step"
+			},
+			{
+				"command": "suteppu.clearAllSteps",
+				"title": "Suteppu: Clear all steps",
+				"icon": "$(clear-all)"
 			},
 			{
 				"command": "suteppu.saveToFile",
