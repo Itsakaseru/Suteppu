@@ -18,8 +18,13 @@ export default function saveStep(suteppu: SuteppuProvider, temporaryStorage: ISt
 
         const selectedText = document.getText(selection);
 
+        if (selection.isEmpty)
+        {
+            vscode.window.showErrorMessage("Selection is empty! Please select some text and try again.");
+            return;
+        }
+
         const data = {
-            index: temporaryStorage.length + 1,
             text: selectedText,
             startAtLine,
             endAtLine,

@@ -1,16 +1,16 @@
 import * as vscode from "vscode";
 import IStorage from "../types/IStorage";
 
-class Suteppu extends vscode.TreeItem
+export class Suteppu extends vscode.TreeItem
 {
     constructor(
         public readonly label: string,
-        public readonly index: number
+        public readonly id: string
     )
     {
         super(label);
+        this.id = id;
         this.tooltip = label;
-        this.index = index;
     }
 }
 
@@ -40,9 +40,8 @@ export class SuteppuProvider implements vscode.TreeDataProvider<Suteppu>
 
         for (let i = 0; i < this.storage.length; i++)
         {
-            const { index } = this.storage[ i ];
-            const label = `[Step #${ index }]`;
-            data.push(new Suteppu(label, index));
+            const label = `[Step #${ i }]`;
+            data.push(new Suteppu(i.toString(), label));
         }
 
         return data;
