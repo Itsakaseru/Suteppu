@@ -33,6 +33,12 @@
 				}
 			]
 		},
+		"viewsWelcome": [
+      		{
+        		"view": "suteppu-storage",
+        		"contents": "No Steps defined.\n\nIn order to use Steps, start saving step or you can load steps from file by clicking this button:\n[Load Steps from File](command:suteppu.loadFromFile)\nTo learn more about how to use Suteppu in VS Code [read the docs](https://willbeaddedin.the.future)."
+      		}
+    	],
 		"menus": {
 			"view/title": [
 				{
@@ -42,7 +48,6 @@
 				},
 				{
 					"command": "suteppu.loadFromFile",
-					"group": "navigation",
 					"when": "view == suteppu-storage"
 				},
 				{
