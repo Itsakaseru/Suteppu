@@ -1,7 +1,8 @@
 {
 	"name": "suteppu",
 	"displayName": "Suteppu",
-	"description": "",
+	"description": "Step by step copy paste for presenting code with Fireship style",
+	"icon": "res/suteppu.png",
 	"publisher": "Itsakaseru",
 	"repository": "https://github.com/Itsakaseru/Suteppu",
 	"version": "0.0.2",
@@ -56,7 +57,32 @@
 					"group": "navigation",
 					"when": "view == suteppu.view.storage"
 				}
-			]
+			],
+			"view/item/context": [
+				{
+					"command": "suteppu.deleteStep",
+					"when" : "view == suteppu.view.storage",
+					"group": "inline"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "suteppu.clearAllSteps",
+					"when": "false"
+				},
+				{
+					"command": "suteppu.saveToFile",
+					"when": "false"
+				},
+				{
+					"command": "suteppu.loadFromFile",
+					"when": "false"
+				},
+            	{
+                	"command": "suteppu.deleteStep",
+                	"when": "false"
+            	}
+        	]
 		},
 		"commands": [
 			{
@@ -69,19 +95,24 @@
 			},
 			{
 				"command": "suteppu.clearAllSteps",
-				"title": "Suteppu: Clear all steps",
+				"title": "Clear all steps",
 				"icon": "$(clear-all)"
 			},
 			{
 				"command": "suteppu.saveToFile",
-				"title": "Suteppu: Save Steps to File",
+				"title": "Save Steps to File",
 				"icon": "$(save)"
 			},
 			{
 				"command": "suteppu.loadFromFile",
-				"title": "Suteppu: Load Steps from File",
+				"title": "Load Steps from File",
 				"icon": "$(preferences-open-settings)"
-			}
+			},
+			{
+      			"command": "suteppu.deleteStep",
+      			"title": "Delete",
+				"icon": "$(x)"
+    		}
 		],
 		"keybindings": [
 			{
