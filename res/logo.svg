@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 319.16 286.74"><defs><style>.cls-1{fill:#fff;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><g id="Group_1" data-name="Group 1"><path id="Polygon_1" data-name="Polygon 1" class="cls-1" d="M129.23,17.56c13.46-23.41,47.24-23.41,60.7,0L314.45,234.31c13.41,23.33-3.44,52.43-30.35,52.43h-249c-26.91,0-43.75-29.1-30.35-52.43Z"/></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="clip-Suteppu_Activity_Bar">
+      <rect width="1024" height="1024"/>
+    </clipPath>
+  </defs>
+  <g id="Suteppu_Activity_Bar" data-name="Suteppu Activity Bar" clip-path="url(#clip-Suteppu_Activity_Bar)">
+    <path id="Path_3" data-name="Path 3" d="M471.556,126.944c41.774-72.213,146.025-72.213,187.8,0l403.358,697.263c41.836,72.32-10.351,162.8-93.9,162.8H162.1c-83.549,0-135.736-90.48-93.9-162.8Z" transform="translate(-53.455 -17.895)" fill="#fff"/>
+  </g>
+</svg>
