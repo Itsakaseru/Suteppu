@@ -4,7 +4,8 @@ import redoStep from "./commands/redoStep";
 import clearAllSteps from "./commands/clearAllSteps";
 import saveToFile from "./commands/saveToFile";
 import loadFromFile from "./commands/loadFromFile";
-import { SuteppuProvider } from "./provider/SuteppuProvider";
+import { Suteppu, SuteppuProvider } from "./provider/SuteppuProvider";
+import deleteStep from "./commands/deleteStep";
 
 export function activate(context: vscode.ExtensionContext)
 {
@@ -25,17 +26,18 @@ export function activate(context: vscode.ExtensionContext)
 
 	let cmdSaveStep = vscode.commands.registerCommand("suteppu.saveStep", () => saveStep(suteppu, temporaryStorage));
 	let cmdRedoStep = vscode.commands.registerCommand("suteppu.reStep", () => redoStep(suteppu, temporaryStorage));
-
 	let cmdClearAllSteps = vscode.commands.registerCommand("suteppu.clearAllSteps", () => clearAllSteps(suteppu, temporaryStorage));
 
 	let cmdSaveToFile = vscode.commands.registerCommand("suteppu.saveToFile", () => saveToFile(temporaryStorage));
 	let cmdLoadFromFile = vscode.commands.registerCommand("suteppu.loadFromFile", () => loadFromFile(suteppu, temporaryStorage));
 
+	let cmdDeleteStep = vscode.commands.registerCommand("suteppu.deleteStep", (step: Suteppu) => deleteStep(suteppu, temporaryStorage, step));
+
+	context.subscriptions.push(cmdDeleteStep);
+
 	context.subscriptions.push(cmdSaveStep);
 	context.subscriptions.push(cmdRedoStep);
-
 	context.subscriptions.push(cmdClearAllSteps);
-
 	context.subscriptions.push(cmdSaveToFile);
 	context.subscriptions.push(cmdLoadFromFile);
 }
