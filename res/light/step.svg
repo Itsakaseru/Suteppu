@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="clip-Step_Dark">
+      <rect width="1024" height="1024"/>
+    </clipPath>
+  </defs>
+  <g id="Step_Dark" data-name="Step Dark" clip-path="url(#clip-Step_Dark)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="323" cy="323" r="323" transform="translate(189 243)" fill="#202020"/>
+  </g>
+</svg>
