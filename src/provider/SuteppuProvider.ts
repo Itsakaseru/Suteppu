@@ -1,3 +1,4 @@
+import path = require("path");
 import * as vscode from "vscode";
 import IStorage from "../types/IStorage";
 
@@ -12,6 +13,11 @@ export class Suteppu extends vscode.TreeItem
         this.id = id;
         this.tooltip = label;
     }
+
+    iconPath = {
+        light: path.join(__filename, '..', '..', '..', 'res', 'light', 'step.svg'),
+        dark: path.join(__filename, '..', '..', '..', 'res', 'dark', 'step.svg')
+    };
 }
 
 export class SuteppuProvider implements vscode.TreeDataProvider<Suteppu>
