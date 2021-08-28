@@ -10,6 +10,7 @@ export default async function loadFromFile(suteppu: SuteppuProvider, temporarySt
     const options: vscode.OpenDialogOptions = {
         canSelectMany: false,
         openLabel: "Open",
+        "defaultUri": workspace.workspaceFolders ? workspace.workspaceFolders[ 0 ].uri : undefined,
         filters: {
             // eslint-disable-next-line @typescript-eslint/naming-convention
             "Suteppu files": [ "suteppu" ]
