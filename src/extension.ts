@@ -7,7 +7,7 @@ import loadFromFile from "./commands/loadFromFile";
 import { Suteppu, SuteppuProvider } from "./provider/SuteppuProvider";
 import deleteStep from "./commands/deleteStep";
 
-export function activate(context: vscode.ExtensionContext)
+export function activate({ subscriptions }: vscode.ExtensionContext)
 {
 	console.log("[Suteppu] is now active!");
 
@@ -24,22 +24,29 @@ export function activate(context: vscode.ExtensionContext)
 		treeDataProvider: suteppu
 	});
 
-	let cmdSaveStep = vscode.commands.registerCommand("suteppu.saveStep", () => saveStep(suteppu, temporaryStorage));
-	let cmdRedoStep = vscode.commands.registerCommand("suteppu.reStep", () => redoStep(suteppu, temporaryStorage));
-	let cmdClearAllSteps = vscode.commands.registerCommand("suteppu.clearAllSteps", () => clearAllSteps(suteppu, temporaryStorage));
+	subscriptions.push(
+		vscode.commands.registerCommand("suteppu.saveStep", () => saveStep(suteppu, temporaryStorage))
+	);
 
-	let cmdSaveToFile = vscode.commands.registerCommand("suteppu.saveToFile", () => saveToFile(temporaryStorage));
-	let cmdLoadFromFile = vscode.commands.registerCommand("suteppu.loadFromFile", () => loadFromFile(suteppu, temporaryStorage));
+	subscriptions.push(
+		vscode.commands.registerCommand("suteppu.reStep", () => redoStep(suteppu, temporaryStorage))
+	);
 
-	let cmdDeleteStep = vscode.commands.registerCommand("suteppu.deleteStep", (step: Suteppu) => deleteStep(suteppu, temporaryStorage, step));
+	subscriptions.push(
+		vscode.commands.registerCommand("suteppu.clearAllSteps", () => clearAllSteps(suteppu, temporaryStorage))
+	);
 
-	context.subscriptions.push(cmdDeleteStep);
+	subscriptions.push(
+		vscode.commands.registerCommand("suteppu.saveToFile", () => saveToFile(temporaryStorage))
+	);
 
-	context.subscriptions.push(cmdSaveStep);
-	context.subscriptions.push(cmdRedoStep);
-	context.subscriptions.push(cmdClearAllSteps);
-	context.subscriptions.push(cmdSaveToFile);
-	context.subscriptions.push(cmdLoadFromFile);
+	subscriptions.push(
+		vscode.commands.registerCommand("suteppu.loadFromFile", () => loadFromFile(suteppu, temporaryStorage))
+	);
+
+	subscriptions.push(
+		vscode.commands.registerCommand("suteppu.deleteStep", (step: Suteppu) => deleteStep(suteppu, temporaryStorage, step))
+	);
 }
 
 // this method is called when your extension is deactivated
