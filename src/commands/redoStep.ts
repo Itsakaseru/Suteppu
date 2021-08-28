@@ -19,6 +19,7 @@ export default async function redoStep(suteppu: SuteppuProvider, temporaryStorag
     }
 
     const startPos = new vscode.Position(data.startAtLine, data.textStartAt);
+
     const endPos = new vscode.Position(data.endAtLine, data.textEndAt);
 
     await editor.edit(builder =>
@@ -26,7 +27,12 @@ export default async function redoStep(suteppu: SuteppuProvider, temporaryStorag
         builder.insert(startPos, data.text);
     });
 
-    editor.selection = new vscode.Selection(startPos, endPos);
+    const regex = /\S/gm;
+
+    if (data.text.match(regex))
+    {
+        editor.selection = new vscode.Selection(startPos, endPos);
+    }
 
     suteppu.refresh();
 }
