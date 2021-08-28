@@ -29,14 +29,14 @@
 		"views": {
 			"suteppu": [
 				{
-					"id": "suteppu-storage",
+					"id": "suteppu.view.storage",
 					"name": "Storage Memory"
 				}
 			]
 		},
 		"viewsWelcome": [
       		{
-        		"view": "suteppu-storage",
+        		"view": "suteppu.view.storage",
         		"contents": "No Steps defined.\n\nIn order to use Steps, start saving step or you can load steps from file by clicking this button:\n[Load Steps from File](command:suteppu.loadFromFile)\nTo learn more about how to use Suteppu in VS Code [read the docs](https://willbeaddedin.the.future)."
       		}
     	],
@@ -45,16 +45,16 @@
 				{
 					"command": "suteppu.saveToFile",
 					"group": "navigation",
-					"when": "view == suteppu-storage"
+					"when": "view == suteppu.view.storage"
 				},
 				{
 					"command": "suteppu.loadFromFile",
-					"when": "view == suteppu-storage"
+					"when": "view == suteppu.view.storage"
 				},
 				{
 					"command": "suteppu.clearAllSteps",
 					"group": "navigation",
-					"when": "view == suteppu-storage"
+					"when": "view == suteppu.view.storage"
 				}
 			]
 		},

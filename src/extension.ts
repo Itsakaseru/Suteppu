@@ -15,11 +15,11 @@ export function activate(context: vscode.ExtensionContext)
 	const suteppu = new SuteppuProvider(temporaryStorage);
 
 	vscode.window.registerTreeDataProvider(
-		"suteppu-storage",
+		"suteppu.view.storage",
 		suteppu
 	);
 
-	vscode.window.createTreeView("suteppu-storage", {
+	vscode.window.createTreeView("suteppu.view.storage", {
 		treeDataProvider: suteppu
 	});
 
