@@ -40,7 +40,7 @@ export class SuteppuProvider implements vscode.TreeDataProvider<Suteppu>
 
         for (let i = 0; i < this.storage.length; i++)
         {
-            const label = `[Step #${ i }]`;
+            const label = `[Step #${ i + 1 }]`;
             data.push(new Suteppu(label, i.toString()));
         }
 
