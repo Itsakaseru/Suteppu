@@ -15,8 +15,8 @@ export class Suteppu extends vscode.TreeItem
     }
 
     iconPath = {
-        light: path.join(__filename, '..', '..', '..', 'res', 'light', 'step.svg'),
-        dark: path.join(__filename, '..', '..', '..', 'res', 'dark', 'step.svg')
+        light: path.join(__filename, '..', '..', '..', 'res', 'light', 'step.png'),
+        dark: path.join(__filename, '..', '..', '..', 'res', 'dark', 'step.png')
     };
 }
 
