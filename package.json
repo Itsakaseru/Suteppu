@@ -3,16 +3,28 @@
 	"displayName": "Suteppu",
 	"description": "Step by step copy paste for presenting code with Fireship style",
 	"icon": "res/suteppu.png",
+	"galleryBanner": {
+		"color": "#232323",
+		"theme": "dark"
+	},
 	"publisher": "Itsakaseru",
-	"repository": "https://github.com/Itsakaseru/Suteppu",
-	"version": "0.0.3",
+	"categories": [
+		"Other",
+		"Visualization"
+	],
+	"homepage": "https://github.com/Itsakaseru/Suteppu/blob/main/README.md",
+	"bugs": {
+		"url": "https://github.com/Itsakaseru/Suteppu/issues"
+	},
+	"repository": {
+    	"type": "git",
+    	"url": "https://github.com/Itsakaseru/Suteppu"
+  	},
+	"version": "1.0.0",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.59.0"
 	},
-	"categories": [
-		"Other"
-	],
 	"activationEvents": [
 		"*"
 	],
@@ -23,7 +35,7 @@
 				{
 					"id": "suteppu",
 					"title": "Suteppu",
-					"icon": "res/logo.svg"
+					"icon": "res/logo.png"
 				}
 			]
 		},
@@ -38,7 +50,7 @@
 		"viewsWelcome": [
       		{
         		"view": "suteppu.view.storage",
-        		"contents": "No Steps defined.\n\nIn order to use Steps, start saving step or you can load steps from file by clicking this button:\n[Load Steps from File](command:suteppu.loadFromFile)\nTo learn more about how to use Suteppu in VS Code [read the docs](https://willbeaddedin.the.future)."
+        		"contents": "No Steps defined.\n\nIn order to use Steps, start saving step or you can load steps from file by clicking this button:\n[Load Steps from File](command:suteppu.loadFromFile)\nTo learn more about how to use Suteppu in VS Code [check guides](https://github.com/Itsakaseru/Suteppu)."
       		}
     	],
 		"menus": {

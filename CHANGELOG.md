@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.0.0 (Initial Release)
+- Make saving steps make sense
+- Fix race condition while redoing steps
+
 ## 0.0.3 (alpha)
 
 - Make extensions active onStartup
