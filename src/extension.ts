@@ -9,7 +9,9 @@ import deleteStep from "./commands/deleteStep";
 
 export function activate({ subscriptions }: vscode.ExtensionContext)
 {
-	console.log("[Suteppu] is now active!");
+	let status = {
+		reStep: true,
+	};
 
 	const temporaryStorage: any = [];
 
@@ -29,7 +31,13 @@ export function activate({ subscriptions }: vscode.ExtensionContext)
 	);
 
 	subscriptions.push(
-		vscode.commands.registerCommand("suteppu.reStep", () => redoStep(suteppu, temporaryStorage))
+		vscode.commands.registerCommand("suteppu.reStep", () => {
+			if (status.reStep)
+			{
+				status.reStep = false;
+				redoStep(suteppu, temporaryStorage, status);
+			}
+		})
 	);
 
 	subscriptions.push(
