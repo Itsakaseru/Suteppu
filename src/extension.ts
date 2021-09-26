@@ -56,6 +56,3 @@ export function activate({ subscriptions }: vscode.ExtensionContext)
 		vscode.commands.registerCommand("suteppu.deleteStep", (step: Suteppu) => deleteStep(suteppu, temporaryStorage, step))
 	);
 }
-
-// this method is called when your extension is deactivated
-export function deactivate() { }
