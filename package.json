@@ -17,9 +17,9 @@
 		"url": "https://github.com/Itsakaseru/Suteppu/issues"
 	},
 	"repository": {
-    	"type": "git",
-    	"url": "https://github.com/Itsakaseru/Suteppu"
-  	},
+		"type": "git",
+		"url": "https://github.com/Itsakaseru/Suteppu"
+	},
 	"version": "1.0.0",
 	"license": "MIT",
 	"engines": {
@@ -48,11 +48,11 @@
 			]
 		},
 		"viewsWelcome": [
-      		{
-        		"view": "suteppu.view.storage",
-        		"contents": "No Steps defined.\n\nIn order to use Steps, start saving step or you can load steps from file by clicking this button:\n[Load Steps from File](command:suteppu.loadFromFile)\nTo learn more about how to use Suteppu in VS Code [check guides](https://github.com/Itsakaseru/Suteppu)."
-      		}
-    	],
+			{
+				"view": "suteppu.view.storage",
+				"contents": "No Steps defined.\n\nIn order to use Steps, start saving step or you can load steps from file by clicking this button:\n[Load Steps from File](command:suteppu.loadFromFile)\nTo learn more about how to use Suteppu in VS Code [check guides](https://github.com/Itsakaseru/Suteppu)."
+			}
+		],
 		"menus": {
 			"view/title": [
 				{
@@ -73,7 +73,7 @@
 			"view/item/context": [
 				{
 					"command": "suteppu.deleteStep",
-					"when" : "view == suteppu.view.storage",
+					"when": "view == suteppu.view.storage",
 					"group": "inline"
 				}
 			],
@@ -90,11 +90,11 @@
 					"command": "suteppu.loadFromFile",
 					"when": "false"
 				},
-            	{
-                	"command": "suteppu.deleteStep",
-                	"when": "false"
-            	}
-        	]
+				{
+					"command": "suteppu.deleteStep",
+					"when": "false"
+				}
+			]
 		},
 		"commands": [
 			{
@@ -121,24 +121,24 @@
 				"icon": "$(preferences-open-settings)"
 			},
 			{
-      			"command": "suteppu.deleteStep",
-      			"title": "Delete",
+				"command": "suteppu.deleteStep",
+				"title": "Delete",
 				"icon": "$(x)"
-    		}
+			}
 		],
 		"keybindings": [
 			{
-    		"command": "suteppu.saveStep",
-    		"key": "home",
-    		"mac": "home",
-    		"when": "editorTextFocus"
-  			},
+				"command": "suteppu.saveStep",
+				"key": "home",
+				"mac": "home",
+				"when": "editorTextFocus"
+			},
 			{
-    		"command": "suteppu.reStep",
-    		"key": "end",
-    		"mac": "end",
-    		"when": "editorTextFocus"
-  			}
+				"command": "suteppu.reStep",
+				"key": "end",
+				"mac": "end",
+				"when": "editorTextFocus"
+			}
 		]
 	},
 	"scripts": {
