@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.0.1
+- Update dependencies
+
 ## 1.0.0 (Initial Release)
 - Make saving steps make sense
 - Fix race condition while redoing steps
